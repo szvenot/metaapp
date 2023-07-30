@@ -1,6 +1,60 @@
-<Hull>
-  GridLayout:
-    orientation: "lr-tb"
-    size_hint_y: None
-    height: self.minimum_height 
-    cols:1
+<Menu>
+    canvas.before:  
+        Color:
+            rgba: 0, 0, 150, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RelativeLayout:
+        size_hint: 1, 1
+
+    BoxLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
+        size_hint: 1, .12
+        columns: 3
+        spacing: 1
+        
+
+        Bottom_left_Button:
+            text: 'Méta Téma'     
+
+        Bottom_middle_Button:
+            text: 'Tá-YOLO'
+                  
+        Bottom_right_Button:
+            text: 'KALAND'
+                       
+<Bottom_left_Button@Button>
+    background_color: 0, 0, 0, 0
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: 0, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]
+
+<Bottom_middle_Button@Button>
+    background_color: 0, 0, 0, 0
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: 0, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]
+
+<Bottom_right_Button@Button>
+    background_color: 0, 0, 0, 0
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: 0, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]

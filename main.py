@@ -1,9 +1,15 @@
 from kivy.app import App
 from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.lang import Builder
+ 
+class Menu(Screen):
+    pass
 
-class metaapp(App):
+class MainApp(App):
     def build(self):
-        return metaapp()
+        sm = ScreenManager()
+        sm.add_widget(Menu(name='menu'))
+        return sm
 
 if __name__ == '__main__':
-    metaapp().run()
+    MainApp().run()
